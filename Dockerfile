@@ -26,6 +26,11 @@ COPY netrc /root/.netrc
 
 WORKDIR ${NOTEBOOK_FOLDER}
 
+RUN git config --global --add safe.directory "*"
+RUN git config --global user.name "luisleo.nhri"
+RUN git config --global user.email "luisleo526@yahoo.com"
+
+
 EXPOSE 8888
 EXPOSE 22
 
