@@ -29,7 +29,8 @@ WORKDIR ${NOTEBOOK_FOLDER}
 RUN git config --global --add safe.directory "*"
 RUN git config --global user.name "luisleo.nhri"
 RUN git config --global user.email "luisleo526@yahoo.com"
-
+RUN git config --global --unset https.proxy
+RUN git config --global --unset http.proxy
 
 EXPOSE 8888
 EXPOSE 22
